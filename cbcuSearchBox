@@ -1,0 +1,153 @@
+<script>
+function noSymbol(nterm){
+	var term = encodeURIComponent(nterm);
+	var url = "https://novanet-primo.hosted.exlibrisgroup.com/discovery/search?query=any,contains,"+term+",AND&tab=CBU&search_scope=CBU&vid=01NOVA_CBU:CBU&facet=location_code,include,7189%E2%80%93112088870007189%E2%80%93cbcu,lk&lang=en&mode=simple&offset=0";
+	window.open(url);
+	return false;
+}
+
+</script>
+<head><link href="http://fonts.cdnfonts.com/css/gibson" rel="stylesheet"></head>
+<style type="text/css">.cbuCRCSearchBar {
+	border: 3px solid #e65300;
+	font-family: 'Gibson', sans-serif;
+	box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    color: black;
+	font-size: 16px;
+    background-color: white;
+	height: 200px;
+	min-width: 570px;
+	width: 100%;
+}
+.topHeader {
+	display: block;
+	overflow: hidden;
+	border: none;
+    margin: 0px 0px 0px 0px;	
+	background-color: #e65300;
+    height: 90px;
+}
+.crcLabel{
+	cursor: default;
+    text-transform: uppercase;
+	color: white;
+	padding: 8px;
+	width: max-content;
+	font-weight: 600;
+	text-align: left;
+	height: 90px;
+	display:inline-block;
+}
+
+.crcLabel h2{
+	margin: 4px 0px;
+	padding: 0px;
+	font-size: 28px;
+}
+.tab h3 {
+	font-size: 16px;
+	color: #000000;
+	margin: 0px 0px;
+	padding: 4px 4px 2px 4px;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.crcContent label {
+	font-weight: normal;
+}
+.crcContent {
+	display: none;
+    padding: 10px;
+	overflow: auto;
+	height: 100%
+}
+.crcContent p {
+	margin: 0px 0px 0px 0px;
+    padding: 4px 10px 0px 10px;
+	align-items: stretch;
+	text-align: left;
+    font-weight: normal;
+	height: 28px;
+}
+
+.crcContent form {
+    margin: 0px 0px 0px 10px;
+    text-align: left;
+	white-space: normal;
+}
+
+.topHeader img{
+	width: 50px;
+	margin-left: 8px;
+}
+
+.crcsbar {
+	margin: 10px;
+}
+.crcsbar:focus {
+	outline: none;
+}
+.crcsbar::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+.crcContent input[type=text] {
+    color: black;
+	background-color: white;
+	display: inline-block;
+	padding: 5px 8px;
+	border: 3px solid #e65300;
+	border-radius: 5px;
+	margin: 10px 10px 10px 0px;
+	font-size: 16px;
+	width: 80%;
+}
+.crcContent input[type=submit] {
+	overflow: auto;
+	background-color: #e65300;
+	border: 3px solid #e65300;
+	border-radius: 5px;
+	padding: 5px 8px;
+	font-weight: bold;
+	color: white;
+	font-size: 16px;
+	min-width: 96px;
+} 
+
+.crcContent input[type=submit]:hover {
+	cursor: pointer; 
+	background-color: #e65300;
+}
+
+.crcContent label {
+	cursor: pointer;
+    display: inline-block;
+	margin: 0px 5px 0px 0px;
+}
+.screen-reader-only {
+	clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 0px;
+}
+
+</style>
+<title></title>
+<div class="cbuCRCSearchBar" id="cbuCRCSearchBar">
+<div class="topHeader">
+<img src="https://i.imgur.com/3EFjIgf.png"/>
+<div class="crcLabel" role="header">
+<h2 class="crcLabel" id="catalogueSearch" style="display: block;">Search the CBU Library </br> Curriculum collection</h2>
+</div>
+</div>
+<div class="crcContent" id="Catalogue" style="display: block;">
+<p>The CBU Library maintains a small but growing print collection of curriculum materials.</p>
+<form onsubmit="noSymbol(cats.value);return false;" role="form"><label class="screen-reader-only" for="cats">search collection</label><input class="crcsbar" id="cats" name="catterm" placeholder="search collection..." role="search" type="text"><input class="crcbut" type="submit" value="search"></form>
+
+</div>
+</div>
